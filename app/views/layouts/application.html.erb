@@ -3,6 +3,19 @@
   <head>
     <title></title>
     <%= stylesheet_link_tag    "application", media: "all" %>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+		<script src="http://platform.linkedin.com/in.js">
+			api_key: "t7r3g6g4pvtw"
+			authorize:true
+			credentials_cookie:true
+		</script>
+		<script>
+			// Once we have an authorization, pass back the token
+			function onLinkedInAuth() {
+				// this must be the same domain as the application, where we write the cookie
+				$.post('https://www.example.org/token-exchange.html');
+			}
+		</script>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>    
   </head>

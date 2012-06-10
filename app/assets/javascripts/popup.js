@@ -62,15 +62,29 @@ $(document).ready(function(){
 	$("#loginPopupClose").click(function(){
 		disablePopup();
 	});
+	
 	//Click out event!
 	$("#darkBackgroundPopUp").click(function(){
 		disablePopup();
 	});
+	
 	//Press Escape event!
 	$(document).keypress(function(e){
 		if(e.keyCode==27 && popupStatus==1){
 			disablePopup();
 		}
 	});
-
+	
+	// $('#loginWithFacebook').hover(function (){
+		// $(this).attr('src', 'facebook_enabled.png');
+	// }, function(){
+		// $(this).attr('src', 'facebook_disabled.png');
+	// });
+// 	
+	// $('#loginWithTwitter').hover(function (){
+		// $(this).attr('src', 'twitter_enabled.png');
+	// }, function(){
+		// $(this).attr('src', 'twitter_disabled.png');
+	// });	
+	
 });
